@@ -1,0 +1,215 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .header {
+    background-color: hsl(198, 80%, 28%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  .backButton {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+  }
+  
+  .backArrow {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .backButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-3px);
+  }
+  
+  .name {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+  
+  .content {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .section {
+    margin-bottom: 3rem;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+    color: #0e5d80;
+    border-bottom: 2px solid #0e5d80;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+  
+  .educationList, .experienceList, .projectsList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .educationItem, .experienceItem, .projectItem {
+    margin-bottom: 1.5rem;
+  }
+  
+  .educationItem h3, .experienceItem h3, .projectItem h3 {
+    margin-bottom: 0.5rem;
+    color: #0e5d80;
+  }
+  
+  .companyPeriod {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  
+  .skill {
+    background-color: #0e5d80;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .projectTech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+  }
+  
+  .techItem {
+    background-color: #e9f5f9;
+    color: #0e5d80;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  
+  .contactInfo p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer {
+    background-color: #0e5d80;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+  }
+  
+  .projectsButton {
+    display: inline-block;
+    background-color: rgb(6, 48, 68);
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid  rgb(8, 47, 65);
+    transition: all 0.3s ease;
+  }
+  
+  .projectsButton:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.5rem;
+    color: #0e5d80;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .header {
+      padding: 1.5rem;
+    }
+    
+    .backButton {
+      left: 1rem;
+      top: 1rem;
+    }  
+    
+    .name {
+      font-size: 2rem;
+    }
+    
+    .content {
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      padding: 1rem;
+    }
+    
+    .name {
+      font-size: 1.8rem;
+    }
+    
+    .title {
+      font-size: 1.1rem;
+    }
+    
+    .section {
+      padding: 1rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.5rem;
+    }
+  }
+
+  .blueBackground {
+    background-color: #EAF3FB; /* Azul claro profesional */
+  }
+  

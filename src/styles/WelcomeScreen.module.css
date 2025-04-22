@@ -1,0 +1,111 @@
+.welcomeContainer {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2378a0, #6bc2f8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  overflow: hidden; /* Para asegurar que nada se salga */
+}
+
+.geometricElements {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+pointer-events: none;
+}
+
+.geometricShape {
+position: absolute;
+border: 2px solid rgba(255, 255, 255, 0.7); /* Borde más visible */
+border-radius: 4px;
+background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil */
+}
+
+.shape1 {
+width: 100px;
+height: 100px;
+top: 15%;
+right: 20%;
+transform: rotate(15deg);
+animation: float 8s ease-in-out infinite;
+}
+
+.shape2 {
+width: 80px;
+height: 80px;
+bottom: 25%;
+left: 15%;
+transform: rotate(45deg);
+animation: float 10s ease-in-out infinite;
+}
+
+.shape3 {
+width: 40px;
+height: 40px;
+top: 30%;
+left: 25%;
+transform: rotate(30deg);
+animation: float 12s ease-in-out infinite;
+}
+
+@keyframes float {
+0% {
+  transform: translate(0, 0) rotate(15deg);
+}
+50% {
+  transform: translate(0, -15px) rotate(20deg);
+}
+100% {
+  transform: translate(0, 0) rotate(15deg);
+}
+}
+
+.mainTitle {
+position: relative;
+z-index: 2;
+font-size: 3rem;
+font-weight: bold;
+color: white;
+font-family: 'Montserrat', sans-serif;
+margin-bottom: 0.5rem;
+}
+
+.subtitle {
+position: relative;
+z-index: 2;
+font-size: 1.8rem;
+font-weight: 400;
+color: white;
+font-family: 'Montserrat', sans-serif;
+margin-bottom: 1rem;
+}
+
+.clickMessage {
+position: relative;
+z-index: 2;
+font-size: 1rem;
+color: white;
+margin-top: 20px;
+animation: blink 1.5s infinite alternate;
+font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes blink {
+from {
+  opacity: 1;
+}
+to {
+  opacity: 0.3;
+}
+}

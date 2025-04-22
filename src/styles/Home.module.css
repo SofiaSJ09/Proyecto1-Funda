@@ -1,0 +1,259 @@
+/* Contenedor principal con fondo más elegante */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9f2f7 100%);
+  color: #333;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Añadir un patrón sutil al fondo */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 25px 25px, rgba(22, 83, 126, 0.03) 2%, transparent 0%);
+  background-size: 50px 50px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Encabezado mejorado */
+.header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Título con efecto de subrayado */
+.title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: rgb(16, 87, 117);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgb(22, 83, 126), transparent);
+}
+
+/* Sección de perfiles */
+.profilesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  color: rgb(11, 0, 0);
+  position: relative;
+  z-index: 1;
+}
+
+.profileCircles {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.profileLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Mejorar la animación del círculo de perfil */
+.profileCircle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profileCircle:hover {
+  transform: translateY(-10px);
+}
+
+/* Imagen de perfil con mejor sombra y borde */
+.profileImage {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+  border: 6px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.profileCircle:hover .profileImage {
+  box-shadow: 0 15px 30px rgba(22, 83, 126, 0.25);
+  border-color: #f0f8ff;
+}
+
+/* Nombre de perfil con efecto en hover */
+.profileName {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(22, 83, 126);
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.profileName::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  height: 2px;
+  background-color: rgb(107, 194, 248);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.profileCircle:hover .profileName::after {
+  transform: scaleX(1);
+}
+
+/* Texto introductorio con mejor diseño */
+.introText {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #444;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid rgb(22, 83, 126);
+}
+
+/* Sección de proyectos */
+.projectsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Botón de proyectos más atractivo */
+.projectsButton {
+  display: inline-block;
+  background-color: rgb(22, 83, 126);
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(22, 83, 126, 0.2);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+
+.projectsButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s ease;
+}
+
+.projectsButton:hover {
+  background-color: rgb(48, 123, 173);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(22, 83, 126, 0.3);
+}
+
+.projectsButton:hover::before {
+  left: 100%;
+}
+
+.projectsButton:active {
+  transform: translateY(1px);
+}
+
+.projectsDescription {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profileCircles {
+      gap: 4rem;
+  }
+  
+  .profileImage {
+      width: 150px;
+      height: 150px;
+  }
+  
+  .title {
+      font-size: 2.5rem;
+  }
+
+  .introText {
+      font-size: 1.2rem;
+      padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 1.5rem 1rem;
+  }
+  
+  .profileCircles {
+      flex-direction: column;
+      gap: 3rem;
+  }
+  
+  .profileImage {
+      width: 140px;
+      height: 140px;
+  }
+
+  .title {
+      font-size: 2rem;
+  }
+
+  .introText {
+      font-size: 1.1rem;
+      padding: 1.2rem;
+  }
+}
